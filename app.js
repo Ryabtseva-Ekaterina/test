@@ -27,6 +27,7 @@ app.use('/users', users);
 
 // app.use(errorsHandler);
 
-app.listen(process.env.NODE_ENV === 'production' ? process.env.PORT : 3001, () => {
+app.listen(process.env.NODE_ENV === 'production' ? process.env.PORT : 3001, (res) => {
   console.log(`App listening on port ${process.env.NODE_ENV === 'production' ? process.env.PORT : 3001}`);
+  res.send(`App listening on port ${process.env.NODE_ENV === 'production' ? process.env.PORT : 3001}`);
 });
